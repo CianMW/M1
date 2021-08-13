@@ -1,0 +1,46 @@
+body {
+    background-image: url(https://images6.alphacoders.com/451/thumb-1920-451028.jpg);
+    background-size: cover;
+}
+
+header {
+    text-align: center;
+    z-index:  10;
+    color: aqua;
+  }
+.h1 {
+  text-align: center;
+}
+.img {
+    float: right;
+}
+.sidebar {
+    color: whitesmoke;
+    height: 100%; 
+    width: 300px; 
+    
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+article {
+  display: block;
+  text-align: center;
+  color: whitesmoke;
+}
+footer {
+    color:whitesmoke;
+    position: absolute;
+  }
+footer.center{
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.sidebar,
+.sidebar + div {
+  display: inline-block
+}
