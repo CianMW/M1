@@ -79,9 +79,12 @@ const check3and7 = (positiveNumber) => {
     }
 }
 console.log(check3and7(21))
+
+
 /* EXERCISE 7
 Write a function "reverseString" to programmatically reverse a given string (es.: Strive => evirtS).
 */
+
 exercise("EXERCISE 7")
 
 const reverseString = (string) =>{
@@ -95,14 +98,16 @@ console.log(reverseString("Hello"))
 /* EXERCISE 8
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
 */
-exercise("EXERCISE 8")
+exercise("EXERCISE 8") //NEEDS TO BE FIXED
 
 const upperFirst = (string) => {
-let capitalized = string.charAt(0).toUpperCase() + string.slice(1);
-return capitalized
+
+let capitalized = string.toUpperCase().split(' ');
+let finalSentence = capitalized.charAt(0) + string.slice(1)
+return finalSentence
 }
 let sentence = "where is the gym?" ;
-console.log(upperFirst(sentence,))
+console.log(upperFirst(sentence))
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.
 */
@@ -110,18 +115,28 @@ exercise("EXERCISE 9")
 
 
 const cutString = (str1,) => {
-    let newString = ""
-    let endCharacter = str1.length
-    newString = str1.charAt(0) + str1.charAt(endCharacter-1)
+    let newString = str1.slice(1, str1.length-1) 
     return newString
 }
+    /*let newString = ""
+    let endCharacter = str1.length-1
+    newString = str1.charAt(0) + str1.charAt(endCharacter)
+    return newString
+}*/
 console.log(cutString("My name is Cian"))
 
 /* EXERCISE 10
 Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
 */
-
-/* WRITE YOUR CODE HERE */
+exercise("EXERCISE 10")
+const giveMeRandom = (n) => {
+    let randomNumbers = []
+    for (let i = 0; i < n; i++) {
+        randomNumbers = randomNumbers.push(Math.floor(Math.random() * 10) + 1) ;
+        return randomNumbers
+    }
+}
+console.log(giveMeRandom(5))
 
 /* WHEN YOU ARE FINISHED
 Commit and push the code to your personal GitHub repository and share the link to your commit in Eduflow.
