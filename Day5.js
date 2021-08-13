@@ -6,10 +6,14 @@ ASSIGNMENT RULES
 - You can Google / use StackOverflow BUT we suggest you to use just the material provided
 */
 
+const exercise =(name) => {
+    return console.log(`\n\n <---------->${name}<---------->`)
+}
+
 /* EXERCISE 1
 Write a function "area" which receives 2 parameters (l1,l2) and calculates the area of the associated rectangle.
 */
-
+exercise("Exercise 1")
 const area = (length, width) => { return length * width}
 console.log(area(5,5))
 /* EXERCISE 2 
@@ -35,9 +39,12 @@ console.log (crazyDiff(21))
 /* EXERCISE 4
 Write a function "boundary" which accept an integer n and returns true if n is within 20 and 100 (included) or if it's equal to 400.
 */
-
-/* WRITE YOUR CODE HERE */
-
+exercise("EXERCISE 4")
+const boundary = (n) => {
+    let inRange = n > 20 && n <= 100 || n === 400
+    return inRange
+}
+console.log(boundary(400))
 /* EXERCISE 5
 Write a function "strivify" which accepts a string.
 It should add the word "Strive" in front of the given string, but if the given string already begins with "Strive", then it should just return the original string.
