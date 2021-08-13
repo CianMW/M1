@@ -82,8 +82,15 @@ console.log(check3and7(21))
 /* EXERCISE 7
 Write a function "reverseString" to programmatically reverse a given string (es.: Strive => evirtS).
 */
+exercise("EXERCISE 7")
 
-/* WRITE YOUR CODE HERE */
+const reverseString = (string) =>{
+    let revertedString = ""
+    for (let i = string.length-1 ; i >= 0 ; i -= 1) {
+        revertedString += string[i] }
+            return revertedString
+}
+console.log(reverseString("Hello"))
 
 /* EXERCISE 8
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
