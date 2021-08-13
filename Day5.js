@@ -19,6 +19,7 @@ console.log(area(5,5))
 /* EXERCISE 2 
 Write a function "crazySum" which receives two integers. It should return the sum of those two values, but if the two values are the same then it should return their sum multiplied by 3.
 */
+exercise("EXERCISE 2")
 const crazySum = (integer1, integer2) => {
 if (integer1 === integer2) {
     return (integer1 + integer2)*3
@@ -30,6 +31,7 @@ console.log(crazySum(2,1))
 Write a function "crazyDiff" that computes the absolute difference between a given number and 19. 
 It should return triple their absolute difference if the given number is greater than 19.
 */
+exercise("EXERCISE 3")
 const crazyDiff = (input) => {
     if (input > 19) {
         return (input-19)*3        
@@ -49,8 +51,15 @@ console.log(boundary(400))
 Write a function "strivify" which accepts a string.
 It should add the word "Strive" in front of the given string, but if the given string already begins with "Strive", then it should just return the original string.
 */
-
-/* WRITE YOUR CODE HERE */
+exercise("EXERCISE 5")
+const strivify =(string)=> {
+    if (string.startsWith("Strive")) {
+        return true
+    } else {
+        return string.concat("Strive")
+    }
+}
+console.log(strivify("cool Strive"))
 
 /* EXERCISE 6
 Write a function "check3and7" which accepts a positive number and check if it is a multiple of 3 or a multiple of 7.
