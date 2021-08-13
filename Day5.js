@@ -95,14 +95,27 @@ console.log(reverseString("Hello"))
 /* EXERCISE 8
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
 */
+exercise("EXERCISE 8")
 
-/* WRITE YOUR CODE HERE */
-
+const upperFirst = (string) => {
+let capitalized = string.charAt(0).toUpperCase() + string.slice(1);
+return capitalized
+}
+let sentence = "where is the gym?" ;
+console.log(upperFirst(sentence,))
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.
 */
+exercise("EXERCISE 9")
 
-/* WRITE YOUR CODE HERE */
+
+const cutString = (str1,) => {
+    let newString = ""
+    let endCharacter = str1.length
+    newString = str1.charAt(0) + str1.charAt(endCharacter-1)
+    return newString
+}
+console.log(cutString("My name is Cian"))
 
 /* EXERCISE 10
 Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
