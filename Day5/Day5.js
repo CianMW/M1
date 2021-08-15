@@ -135,9 +135,10 @@ exercise("EXERCISE 10")
 const giveMeRandom = (n) => {
     let randomNumbers = []
     for (let i = 0; i < n; i++) {
-        randomNumbers = randomNumbers.push(Math.floor(Math.random() * 10) + 1) ;
-        return randomNumbers
-    }
+        let freshNumber = Math.floor(Math.random() * 10) + 1 ;
+        randomNumbers.push(freshNumber)
+        
+    }return randomNumbers
 }
 console.log(giveMeRandom(5))
 
