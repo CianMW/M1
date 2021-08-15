@@ -100,14 +100,17 @@ Write a function "upperFirst" to capitalize the first letter of each word of a g
 */
 exercise("EXERCISE 8") //NEEDS TO BE FIXED
 
-const upperFirst = (string) => {
-
-let capitalized = string.toUpperCase().split(' ');
-let finalSentence = capitalized.charAt(0) + string.slice(1)
-return finalSentence
+function uppercase(str)
+{
+  let wordArray = str.split(' ');
+  let newarray1 = [];
+    
+  for(let i = 0; i < wordArray.length; i++){
+      newarray1.push(wordArray[i].charAt(0).toUpperCase()+wordArray[i].slice(1));
+  }
+  return newarray1.join(' ');
 }
-let sentence = "where is the gym?" ;
-console.log(upperFirst(sentence))
+console.log(uppercase("hey lets go to the gym"));
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.
 */
