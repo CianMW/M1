@@ -212,10 +212,23 @@ const rollTheDices = (n) =>{
         diceRoll.sum += diceRoll.values[i]
     } return diceRoll
 }
-console.log("Yes you have critical hit the creature ! roll your damage! : " + rollTheDices(8))
+console.log(rollTheDices(8))
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
 */
+exercise("Exercise 9")
+
+const howManyDays = (d) => {
+    let currentDate = new Date()
+    let pastDate = d
+    let oneDay = 1000 * 60 * 60 * 24 ;
+
+    let Result = Math.round((currentDate.getTime() - pastDate.getTime()) / (oneDay));
+   return Result + " Days have passed"
+}
+
+console.log(howManyDays(new Date(2021, 3, 23)))
+
 
 /* Ex.10
    Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
