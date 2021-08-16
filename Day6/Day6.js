@@ -395,14 +395,15 @@ console.log(deleteProp(testObject,"name"))
 */
 exercise("Exercise 12") //cannot get this one to work
 const olderMovie = (movieList) => {
-    let oldMovie = []
+    let oldMovie = { Year: 2100 }
     for (let i = 0; i < movieList.length; i++) {
-    let releaseYear = parseInt(movieList[i].Year, 10)
-        if (releaseYear < oldMovie.Year) {
-         releaseYear = movieList[i].Year
+        let movie = movieList[i]
+        let currentYear = parseInt(movie.Year)
+        if (currentYear < oldMovie.Year) {
+         oldMovie = movie
         }
-    }
-        return oldMovie
+    }return oldMovie
+        
     }
 
 
@@ -486,16 +487,19 @@ console.log(sumAllTheYears(movies) )
 /* Ex.18
     Write a function called "searchByTitle" which receives a string as a parameter and returns all the movies which contain that string in the title.
 */
-const searchByTitle = (arrayList, string) => {
-    let matchingTitles = []
-    for (let i = 0; i < arrayList.length; i++) {
-        const element = arrayList[i];
-        if (arrayList[i].Title.includes(string)) {
-            matchingTitles.push(arrayList[i])
+exercise("Exercise 18") 
+
+const searchByTitle = (string) => {
+    let searchResult = []
+    for (let i = 0; i < movies.length; i++) {
+        let movie = movies[i].Title;
+        if (movie.includes(string)) {
+            searchResult.push(movies[i])
         }
-    }return matchingTitles
+    } return searchResult
 }
-console.log(searchByTitle(movies, "lord"))
+
+console.log(searchByTitle("Lord"))
 /* Ex.19
     Write a function called "searchAndDivide" which receives a string as a parameter and returns an object;
     this object should contain an array called "match", made by all the movies which contain the given string in the title,
@@ -529,6 +533,7 @@ console.log(searchByTitle(movies, "lord"))
 /* Ex.23
   Create a function called "isItPrime" that receives a number as a parameter and returns true if the given number is a prime number.
 */
+
 
 /* /* This movies array is used throughout the exercises. Please don't change it :)  */
 /*const movies = [
