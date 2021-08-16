@@ -69,7 +69,11 @@ console.log(me)
 /* Ex.1
     Write a function called "dice"; it should randomize an integer number between 1 and 6.
 */
-
+exercise("Exercise 1")
+let dice = (x) => {
+    return Math.ceil(Math.random() * 6)
+}
+console.log("Lets roll the die! " + dice())
 /* Ex.2 
     Write a function called "whoIsBigger" which receives 2 numbers as parameters and returns the biggest one.
 */
