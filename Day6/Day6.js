@@ -441,18 +441,18 @@ console.log(onlyTheTitles(movies))
    Write a function called "onlyInThisMillennium" which returns only the movies produced in this millennium.
 */
 exercise("Exercise 15") // cannot get this one to work!
-const onlyInThisMillennium = (list) => {
-    let postY2K = []
-    let tempObject = {}
-    for (let i = 0; i < list.length; i++) {
-        let movieYear = parseInt(list[i].year)
-        if ( movieYear >= 2000) {
-            object.assign(tempObject, list[i])
-            postY2K += tempObject
+const onlyInThisMillennium =(array) => {
+    let postY2k = []
+    for (let i = 0; i < array.length; i++) {
+        const movieRelease = array[i].Year;
+        if (movieRelease > 1999) {
+            postY2k = (array[i])
         }
         
-    }return postY2K
+    } return postY2k
+
 }
+
 console.log(onlyInThisMillennium(movies))
 
 /* Ex.16 
@@ -505,10 +505,32 @@ console.log(searchByTitle("Lord"))
     this object should contain an array called "match", made by all the movies which contain the given string in the title,
     and another array "unmatch" with all the remaining ones.
 */
+exercise("Exercise 19") 
+
+const searchAndDivide = (string) => {
+    const matches = {
+        match: [],
+        unmatch: [],
+    }
+    for (let i = 0; i < movies.length; i++) {
+        const movie = movies[i].Title;
+        if (movie.indexOf(string) !== -1) {
+            matches.match.push(movies[i])
+        } else {
+            matches.unmatch.push(movies[i])
+        }
+    }return matches
+}
+console.log(searchAndDivide("Lord"))
+
 
 /* Ex.20
    Write a function called "removeIndex" which receives a number as a parameter and returns the movies array without the element in the given position.
 */
+
+const removeIndex = () => {
+    
+}
 
 // [EXTRAS] JS Advanced
 
