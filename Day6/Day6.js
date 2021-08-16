@@ -134,6 +134,21 @@ console.log(onlyLetters("where 4 art 2 romeo?"))
 /* Ex.6 
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
 */
+exercise("Exercise 6")
+
+const isThisAnEmail= (string) => {
+    gmail = "@gmail.com"
+    hotmail = "@hotmail.com"
+    yahoo = "@yahoo.com"
+    let isEmail = true
+
+    if (string.includes(gmail) || string.includes(hotmail) ||string.includes(yahoo) ) {
+        isEmail = true
+    } else {
+        isEmail = false
+    } return "is this an email? " + isEmail
+}
+console.log(isThisAnEmail("cian.ward@gmail.com"))
 
 /* Ex.7
    Write a function called "whatDayIsIt" that should return the current day of the week.
