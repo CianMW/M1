@@ -77,7 +77,19 @@ console.log("Lets roll the die! " + dice())
 /* Ex.2 
     Write a function called "whoIsBigger" which receives 2 numbers as parameters and returns the biggest one.
 */
+exercise("Exercise 2")
 
+
+let whoIsBigger = (x , y) => {
+    let biggerNumber = 0
+    if ( x > y) {
+        biggerNumber = x
+    } else {
+        biggerNumber = y
+    }
+    return "The bigger number is: " + biggerNumber
+}
+console.log(whoIsBigger(100,78))
 /* Ex.3
     Write a function called "splitMe" which receives a string as a parameter and returns an array with every word in that string.
     Ex. splitMe("I love coding") => returns ["I", "Love", "Coding"]
