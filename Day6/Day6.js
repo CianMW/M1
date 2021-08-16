@@ -153,22 +153,12 @@ console.log(isThisAnEmail("cian.ward@gmail.com"))
 /* Ex.7
    Write a function called "whatDayIsIt" that should return the current day of the week.
 */
+exercise("Exercise 7")
 
 const whatDayIsIt = () => {
     let date = new Date();
     let day = date.getDay()
     let weekday = "The day of the week is "
-    
-    /* new Array(7);
-    weekday[0] = "Sunday";
-    weekday[1] = "Monday";
-    weekday[2] = "Tuesday";
-    weekday[3] = "Wednesday";
-    weekday[4] = "Thursday";
-    weekday[5] = "Friday";
-    weekday[6] = "Saturday";
-
-    var n = weekday[d.getDay()]*/
 
     switch (day) {
         case 0:
@@ -208,7 +198,21 @@ console.log(whatDayIsIt())
         values: [3, 3, 4]
     }
 */
+exercise("Exercise 8")
 
+const rollTheDices = (n) =>{
+    let diceRoll = {
+          sum : 0,
+          values : [],
+      
+    }
+
+    for (let i = 0; i < n; i++) {
+        diceRoll.values.push(dice());
+        diceRoll.sum += diceRoll.values[i]
+    } return diceRoll
+}
+console.log("Yes you have critical hit the creature ! roll your damage! : " + rollTheDices(8))
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
 */
