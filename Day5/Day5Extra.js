@@ -1,16 +1,78 @@
+const exercise =(name) => {
+    return console.log(`\n\n <---------->${name}<---------->`)
+}
+
+
 /* EXERCISE 11
 Write a function "checkArray" which receives an array of random numbers (created with giveMeRandom) and prints, for each item, whether it's bigger than 5.
 The function returns the sum of the numbers bigger than 5.
 */
+exercise("Exercise 11")  //needs fixxing
 
-/* WRITE YOUR CODE HERE */
+
+const giveMeRandom = (n) => {
+    let randomNumbers = []
+    let greaterTotal = 0
+    for (let i = 0; i < n; i++) {
+        let freshNumber = Math.floor(Math.random() * 10) + 1 ;
+        let greaterTotal = 0
+        randomNumbers.push(freshNumber)
+        if (freshNumber > 5) {
+            console.log(`${freshNumber} is greater than 5`)
+        } else {
+            console.log(`${freshNumber} is not greater than 5`)
+        }
+        if (freshNumber > 5) {
+            greaterTotal += freshNumber
+        }
+        }
+        console.log(`The sum of all the numbers greater than 5 is ${greaterTotal} `)
+    return randomNumbers
+    
+}
+console.log(giveMeRandom(5))
 
 /* EXERCISE 12
 In your eCommerce you have an array of objects called shoppingCart. In this array you have a number of objects with a price, a name, an id and the quantity to be shipped.
 Create a function "shippingCartTotal" which calculates the total due to the shop.
 */
+const stockItem = {
+    name: "",
+    id: "",
+    price: 0,
+    quantity: 0,
+}
+const egg = {
+    name: "egg",
+    id: "355",
+    price: .5,
+    quantity: 12,
+}
+const fork = {
+    name: "fork",
+    id: "3663",
+    price: 4,
+    quantity: 2,
+}
+const banana = {
+    name: "banana",
+    id: "2582",
+    price: 2,
+    quantity: 10,
+}
+const ipod = {
+    name: "ipod",
+    id: "1482",
+    price: 285,
+    quantity: 1 ,
+}
 
-/* WRITE YOUR CODE HERE */
+let shoppingCart = [egg, banana, fork, ipod]
+let shoppingCartTotal = (cart) => {
+
+
+}
+
 
 /* EXERCISE 13
 In your eCommerce you have an array of objects called shoppingCart. In this array you have a number of objects with a price, a name, an id and the quantity to be shipped.
@@ -56,8 +118,21 @@ Write a function "longest" to find the longest string from an given array of str
 Write a function to create a very simple anti spam filter for your mailbox. The function takes a string emailContent, and returns a boolean.
 Check if the email is valid using string methods. The email (in this example) is valid if the words SPAM and SCAM does not appear.
 */
-
-/* WRITE YOUR CODE HERE */
+exercise("Exercise 19")
+ 
+let sampleEmail = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed SPAM do eiusmod tempor SCAM incididunt ut labore et dolore magna aliqua. Posuere urna nec tincidunt praesent semper feugiat nibh sed. Orci phasellus egestas tellus rutrum tellus pellentesque eu. Mauris pharetra et ultrices neque. Mi ipsum faucibus vitae aliquet. Libero id faucibus nisl tincidunt eget nullam. Dui nunc mattis enim ut tellus elementum. Ultricies mi quis hendrerit dolor. Pretium viverra suspendisse potenti nullam ac tortor. Etiam erat velit scelerisque in dictum non consectetur a erat. Suspendisse interdum consectetur libero id faucibus. Scelerisque eu ultrices vitae auctor eu. Nullam ac tortor vitae purus faucibus ornare suspendisse."
+let spamFilter = (text) => {
+    wordFilter = []
+    wordFilter = sampleEmail.split(" ")
+    let isScam = false
+    for (let i = 0; i < wordFilter.length; i++) {
+        let currentWord = wordFilter[i];
+        if (currentWord === "SCAM" || "SPAM") {
+            console.log("This is spam")
+        }
+        
+    }
+}
 
 /* EXERCISE 20
 Write a function that receives a date d as parameter and calculates the number of days passes since the d.
@@ -66,7 +141,7 @@ Write a function that receives a date d as parameter and calculates the number o
 /* WRITE YOUR CODE HERE */
 
 /* EXERCISE 21
-Write a function "matrixGenerator" that receives x and y as parameter. The result should be a matrix of x times y with, as value, the index of the position.
+Write a function "matrixGenerator" that receives x and y as parameter. The result should be a matrix of x times y with, as value, the i of the position.
 Ex.: X = 3, Y = 2
 ["00","01","02"
 "10","11","12"]
