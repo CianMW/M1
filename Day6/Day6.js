@@ -393,7 +393,7 @@ console.log(deleteProp(testObject,"name"))
 /* Ex.12 
     Write a function called "olderMovie" which finds the oldest movie in the array provided at the end of this file.
 */
-exercise("Exercise 12")
+exercise("Exercise 12") //cannot get this one to work
 const olderMovie = (movieList) => {
     let oldMovie = []
     for (let i = 0; i < movieList.length; i++) {
@@ -439,11 +439,37 @@ console.log(onlyTheTitles(movies))
 /* Ex.15
    Write a function called "onlyInThisMillennium" which returns only the movies produced in this millennium.
 */
+exercise("Exercise 15") // cannot get this one to work!
+const onlyInThisMillennium = (list) => {
+    let postY2K = []
+    let tempObject = {}
+    for (let i = 0; i < list.length; i++) {
+        let movieYear = parseInt(list[i].year)
+        if ( movieYear >= 2000) {
+            object.assign(tempObject, list[i])
+            postY2K += tempObject
+        }
+        
+    }return postY2K
+}
+console.log(onlyInThisMillennium(movies))
 
 /* Ex.16 
     Write a function called "getMovieById" which receives an id as a parameter and returns the movie with the given id.
 */
+exercise("Exercise 16") 
+const getMovieById = (arrayList, id) => {
+    let correctMovie = []
+    for (let i = 0; i < arrayList.length; i++) {
 
+        if (id === arrayList[i].imdbID) {
+            correctMovie = arrayList[i]
+        }
+        
+    }return correctMovie
+}
+    
+      console.log( getMovieById(movies,"tt0848228" ))
 /* Ex.17
     Write a function called "sumAllTheYears" which returns the sum of all the years in which the movies provided have been produced.
 */
