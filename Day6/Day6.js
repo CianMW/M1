@@ -486,7 +486,16 @@ console.log(sumAllTheYears(movies) )
 /* Ex.18
     Write a function called "searchByTitle" which receives a string as a parameter and returns all the movies which contain that string in the title.
 */
-
+const searchByTitle = (arrayList, string) => {
+    let matchingTitles = []
+    for (let i = 0; i < arrayList.length; i++) {
+        const element = arrayList[i];
+        if (arrayList[i].Title.includes(string)) {
+            matchingTitles.push(arrayList[i])
+        }
+    }return matchingTitles
+}
+console.log(searchByTitle(movies, "lord"))
 /* Ex.19
     Write a function called "searchAndDivide" which receives a string as a parameter and returns an object;
     this object should contain an array called "match", made by all the movies which contain the given string in the title,
