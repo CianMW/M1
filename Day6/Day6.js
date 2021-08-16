@@ -124,7 +124,13 @@ console.log(deleteOne("where is the cow", false))
    Write a function called "onlyLetters" which receives a string as a parameter and returns it removing all the digits.
    Ex.: onlyLetters("I have 4 dogs")  => returns "I have  dogs"
 */
+exercise("Exercise 5")
 
+let onlyLetters = (string) => {
+    const withoutNumbers = string.replace(/[0-9]/g, '')
+    return withoutNumbers
+}
+console.log(onlyLetters("where 4 art 2 romeo?"))
 /* Ex.6 
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
 */
