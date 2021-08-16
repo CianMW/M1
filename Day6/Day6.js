@@ -473,6 +473,15 @@ const getMovieById = (arrayList, id) => {
 /* Ex.17
     Write a function called "sumAllTheYears" which returns the sum of all the years in which the movies provided have been produced.
 */
+exercise("Exercise 17") 
+const sumAllTheYears = (arrayList) => {
+    let allYears = 0
+    for (let i = 0; i < arrayList.length; i++) {
+        allYears += parseInt(arrayList[i].Year)
+        
+    }return "The sum of all the release years is : " + allYears
+}
+console.log(sumAllTheYears(movies) )
 
 /* Ex.18
     Write a function called "searchByTitle" which receives a string as a parameter and returns all the movies which contain that string in the title.
