@@ -107,6 +107,18 @@ console.log(splitMe("A group of miners are protesting outside a noble’s estate
 /* Ex.4
     Write a function called "deleteOne" which receives a string and a boolean as parameters. If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
 */
+exercise("Exercise 4")
+
+let deleteOne = (string, value) => {
+    let changedString = ""
+    if (value === true) {
+        changedString = string.substring(1)
+    } else {
+        changedString = string.substring(0, string.length-1)
+    }
+    return changedString
+}
+console.log(deleteOne("where is the cow", false))
 
 /* Ex.5
    Write a function called "onlyLetters" which receives a string as a parameter and returns it removing all the digits.
