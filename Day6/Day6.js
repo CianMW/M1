@@ -154,6 +154,50 @@ console.log(isThisAnEmail("cian.ward@gmail.com"))
    Write a function called "whatDayIsIt" that should return the current day of the week.
 */
 
+const whatDayIsIt = () => {
+    let date = new Date();
+    let day = date.getDay()
+    let weekday = "The day of the week is "
+    
+    /* new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+
+    var n = weekday[d.getDay()]*/
+
+    switch (day) {
+        case 0:
+            weekday += "Sunday"
+            break;
+        case 1:
+            weekday += "Monday"
+            break;
+        case 2:
+            weekday += "Tuesday"
+            break;
+        case 3:
+            weekday += "Wednesday"
+            break;
+        case 4:
+            weekday += "Thursday"
+            break;
+        case 5:
+            weekday += "Friday "
+            break;
+        case 6:
+            weekday  += "Saturday"
+            break;
+        default: weekday += "well I have abolutely no idea"
+            break;
+    }   return weekday
+
+}
+console.log(whatDayIsIt())
 /* Ex.8
     Write a function called "rollTheDices" which receives a number as a parameter.
     It should invoke the dice() function defined in Ex1 the specified amount of times,
